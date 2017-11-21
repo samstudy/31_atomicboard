@@ -65,6 +65,17 @@ class AtomicBoard(unittest.TestCase):
 
 
     def test_drag_and_drop(self):
+        """
+        How to simulate HTML5 drag_and_drop in selenium.
+        HTML5 "drag&drop" is not currently supported by Selenium
+        One of the suggested workarounds is to simulate HTML5 drag and 
+        drop via JavaScript:
+        1)download drag_and_drop_helper.js
+        2)execute the script via execute_script() calling simulateDragDrop()
+        function on a source element passing the target element as a dropTarget
+        3)It requires dynamically load jQuery for this  purpose we will use
+         jquery_load_helper.js
+        """
         driver = self.driver
         driver.implicitly_wait(WAITING_TIME)
         week_tasks=driver.find_elements_by_css_selector('span.'
