@@ -82,8 +82,10 @@ class AtomicBoard(unittest.TestCase):
                                                         'col-md-4.tickets-column.js-tickets-column.ng-scope')[1]
         count_tasks = len(week_tasks.find_elements_by_css_selector('span.'
                                                                    'badge.ticket_status.ng-binding'))
+        # The jquery_load_helper.js was taken from source https://sqa.stackexchange.com/questions/2921/
         with open("jquery_load_helper.js") as f:
             load_jquery_js = f.read()
+        # The drag_and_drop_helper.js was taken from source https://gist.github.com/rcorreia/2362544  
         with open("drag_and_drop_helper.js") as f:
             drag_and_drop_js = f.read()
         driver.execute_async_script(load_jquery_js, JQ_URL)
