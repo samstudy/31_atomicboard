@@ -1,4 +1,6 @@
-/** dynamically load jQuery */
+//The code was taken from https://sqa.stackexchange.com/questions/2921
+
+
 (function(jqueryUrl, callback) {
     if (typeof jqueryUrl != 'string') {
         jqueryUrl = 'https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js';

@@ -1,3 +1,6 @@
+//The code was taken from  https://gist.github.com/rcorreia/2362544
+
+
 (function( $ ) {
         $.fn.simulateDragDrop = function(options) {
                 return this.each(function() {
